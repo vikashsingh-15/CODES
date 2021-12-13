@@ -63,7 +63,7 @@ Expected Auxilliary Space : O(n) */
         ArrayList <Integer> nearlySorted(int arr[], int num, int k)
         {
             PriorityQueue <Integer> pq=new PriorityQueue<>();
-              ArrayList<Integer> arrlist = new ArrayList<Integer>(5);
+              ArrayList<Integer> arrlist = new ArrayList<Integer>();
             
             
             for(int i=0;i<=k;i++){
