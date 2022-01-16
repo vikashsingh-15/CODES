@@ -1,35 +1,38 @@
-/*1. Power Of Numbers 
-Easy Accuracy: 49.24% Submissions: 60027 Points: 2
-Given a number and its reverse. Find that number raised to the power of its own reverse.
-Note: As answers can be very large, print the result modulo 109 + 7.
+/*2. The Nth Fibonnaci 
+Easy Accuracy: 38.12% Submissions: 3818 Points: 2
+Given a positive integer N, find the last digit of the Nth term from the Fibonacci series.
+ 
 
 Example 1:
 
 Input:
-N = 2
-Output: 4
-Explanation: The reverse of 2 is 2
-and after raising power of 2 by 2 
-we get 4 which gives remainder as 
-4 by dividing 1000000007.
+N = 5
+Output:
+5
+Explanation:
+5th Fibonacci number is 5
 Example 2:
 
 Input:
-N = 12
-Output: 864354781
-Explanation: The reverse of 12 is 21
-and 1221 , when divided by 1000000007 
-gives remainder as 864354781.
-Your Task:
-You don't need to read input or print anything. You just need to complete the function pow() that takes two parameters N and R denoting the input number and its reverse and returns power of (N to R)mod(109 + 7).
+N = 14
+Output:
+7
+Explanation:
+14th Fibonacci number is 377
+It's last digit is 7
 
-Expected Time Complexity: O(LogN).
-Expected Auxiliary Space: O(LogN).
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function fib() which takes an integer N as input parameter and returns the last digit of Nth Fibonacci number.
+
+Expected Time Complexity: O(N)
+Expected Space Complexity: O(1)
+ 
 
 Constraints:
-1 <= N <= 109 */
+1 <= N <= 1000 */
 
-// { Driver Code Starts
+
+// Driver Code Starts
 //Initial Template for Java
 
 /*package whatever //do not write package name here */
@@ -92,6 +95,7 @@ class Solution
         //Your code here
         return pR(N,R)%1000000007;
     }
+    
     long pR(int N,int R){
         if(R==0){
             return 1;
