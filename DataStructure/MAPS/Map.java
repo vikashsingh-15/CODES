@@ -1,3 +1,5 @@
+package JAVA.CODES.CODES.DataStructure.MAPS;
+
 // package JAVA.CODECHEF.CodeChefLong;
 
 // import java.lang.*;

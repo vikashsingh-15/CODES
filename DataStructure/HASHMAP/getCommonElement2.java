@@ -1,3 +1,5 @@
+package JAVA.CODES.CODES.DataStructure.HASHMAP;
+
 /*Get Common Elements - 2
 Easy  Prev   Next
 1. You are given a number n1, representing the size of array a1.

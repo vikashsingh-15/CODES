@@ -1,3 +1,5 @@
+package JAVA.CODES.CODES.InterviewBit.Array;
+
 
 /*Maximum Sum Triplet
 Medium

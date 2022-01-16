@@ -1,3 +1,5 @@
+package JAVA.CODES.CODES.DataStructure.MAPS;
+
 // import java.lang.*;
 import java.util.*;
 import java.util.SortedMap.*;

@@ -1,3 +1,5 @@
+package JAVA.CODES.CODES.DataStructure.HEAP;
+
 /*8. Nearly sorted 
 Medium Accuracy: 60.52% Submissions: 9994 Points: 4
 Given an array of n elements, where each element is at most k away from its target position, you need to sort the array optimally.

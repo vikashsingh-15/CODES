@@ -1,3 +1,5 @@
+package JAVA.CODES.CODES.DataStructure.HASHMAP;
+
 /*Highest Frequency Character
 Easy  Prev   Next
 1. You are given a string str.

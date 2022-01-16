@@ -1,3 +1,5 @@
+package JAVA.CODES.CODES.InterviewBit.Array;
+
 // //Question
 
 // Pick from both sides!
