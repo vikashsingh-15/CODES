@@ -27,6 +27,7 @@ public class implement {
 //Integer array not of int type because we are storing null value too;
 //if we dont want to store null then we can take int data type oof Array.
     Node root = construct(arr);
+    display(root);
   }
 
 
@@ -90,7 +91,6 @@ public class implement {
     }
 
     String str = " <- " + node.data + " -> ";
-
     String left = (node.left == null) ? "." :  "" + node.left.data;
     String right = (node.right == null) ? "." : "" + node.right.data;
 
