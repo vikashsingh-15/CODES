@@ -40,7 +40,7 @@ public class size_Sum__Max_height {
 
             public static int sum(Node node){
                 int sum=0;
-                for(Node child:node.chiildren){
+                for(Node child:node.children){
                     sum=sum+sum(child);
                 }
                 sum=sum+node.data;
@@ -97,7 +97,7 @@ public class size_Sum__Max_height {
                 int height=-1;// in term of edge -1, In term of node 0
                 for(Node child:node.children){
                     int ChildHeight=height(child);
-                    height=Math.max(maxChildHeight,height);
+                    height=Math.max(ChildHeight,height);
                 }
                 height=height+1;
                 return height;
@@ -112,7 +112,7 @@ public class size_Sum__Max_height {
                 else{
                     for(Node child:node.children){
                         int ChildHeight=height2(child);
-                        height=Math.max(maxChildHeight,height);
+                        height=Math.max(ChildHeight,height);
                     }
                     height=height+1;
                     return height;
@@ -154,9 +154,27 @@ public class size_Sum__Max_height {
         // }
         
         Node root = construct(arr);
-        display(root);
+        // display(root);
         // display2(root);
         // display3(root);
+
+        // size(root);
+        // size2(root);
+        // maxNode(root);
+        // maxNode2(root);
+        // sum(root);
+        // sum2(root);
+        // height(root);
+        // height2(root);
+        // System.out.println(size(root));
+        // System.out.println(size2(root));
+        // System.out.println(maxNode(root));
+        // System.out.println(maxNode2(root));
+        // System.out.println(sum(root));
+        // System.out.println(sum2(root));
+        // System.out.println(height(root));
+        // System.out.println(height2(root));
+        
 
     }
 
