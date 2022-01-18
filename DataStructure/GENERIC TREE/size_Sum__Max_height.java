@@ -174,8 +174,6 @@ public class size_Sum__Max_height {
         // System.out.println(sum2(root));
         // System.out.println(height(root));
         // System.out.println(height2(root));
-        
-
     }
 
 
