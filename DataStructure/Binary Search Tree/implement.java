@@ -12,17 +12,8 @@ public class implement {
       this.right = right;
     }
   }
-  public static class Pair {
-    Node node;
-    int state;
 
-    Pair(Node node, int state) {
-      this.node = node;
-      this.state = state;
-    }
-  }
-
-  public static void main(String[]args) {
+  public static void main(String[]args) throws Exception{
     // Integer[]arr = {50, 25, 12, null, null, 37, 30, null, null, null, 75, 62, null, 70, null, null, 87, null, null};
     int []arr = {12,25,37,50,62,75,87};
 
@@ -35,6 +26,12 @@ public class implement {
 
 
   public static Node construct(int[]arr,int low,int high) {
+
+
+    if(low>high){
+        return null;
+    }
+
       int mid =(low+high)/2;
       int data =arr[mid];
       Node leftChild = construct(arr,low,mid-1);
@@ -48,7 +45,6 @@ public class implement {
     if (node == null) {
       return;
     }
-
     String str = " <- " + node.data + " -> ";
     String left = (node.left == null) ? "." :  "" + node.left.data;
     String right = (node.right == null) ? "." : "" + node.right.data;
