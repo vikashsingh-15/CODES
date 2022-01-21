@@ -9,6 +9,14 @@ public class traversal {
         int data; // for storing the data
         LinkedList<Node> children = new LinkedList<>(); // for storing the child nodes
 
+        // Node class is needed for level order tranversal 2 since it will create a null
+        // point exception if we try to store null in integer
+        Node() {
+        }
+
+        Node(int data) {
+            this.data = data;
+        }
     }
 
     public static void PrePost(Node node) {
@@ -41,14 +49,13 @@ public class traversal {
         System.out.println(".");
     }
 
-
     public static void levelOrderLineWise(Node node) {
         Queue<Node> parentQueue = new ArrayDeque<>();
         Queue<Node> childQueue = new ArrayDeque<>();
         parentQueue.add(node);
         while (parentQueue.size() > 0) {// remove print add algo
             node = parentQueue.remove();
-            System.out.print(node.data+" ");
+            System.out.print(node.data + " ");
             for (Node child : node.children) {
                 childQueue.add(child);
             }
@@ -58,7 +65,44 @@ public class traversal {
                 System.out.println();
             }
         }
+    }
 
+    public static void levelOrderLineWise2(Node node) {
+        Queue<Node> parentQueue = new ArrayDeque<>();
+        parentQueue.add(node);
+        parentQueue.add(new Node(-1));// instead of null we are using -1 as a flag.Do do so we have to ctreate a Node
+                                      // in the main method
+        while (parentQueue.size() > 0) {
+            node = parentQueue.remove();
+            if (node.data != -1) {// this null willl give null poineter exception to avoid this we can either
+                                  // create a node classs with data as -1
+                System.out.print(node.data + " ");
+                for (Node child : node.children) {
+                    parentQueue.add(child);
+                }
+            } else {
+                if (parentQueue.size() > 0) {
+                    parentQueue.add(new Node(-1));
+                    System.out.println();
+                }
+            }
+        }
+    }
+
+    public static void levelOrderLineWise3(Node node) {
+        Queue<Node> queue = new ArrayDeque<>();
+        queue.add(node);
+        while (queue.size() > 0) {
+            int count = queue.size();
+            for (int i = 0; i < count; i++) {
+                node = queue.remove();
+                System.out.print(node.data + " ");
+                for (Node child : node.children) {
+                    queue.add(child);
+                }
+            }
+            System.out.println();
+        }
     }
 
     public static void zigZag(Node node) {
@@ -68,7 +112,7 @@ public class traversal {
         int level = 0;
         while (parentStack.size() > 0) {
             node = parentStack.pop();
-            System.out.print(node.data+" ");
+            System.out.print(node.data + " ");
             if (level % 2 == 0) {
                 for (int i = 0; i < node.children.size(); i++) {
                     Node t = node.children.get(i);
@@ -163,7 +207,9 @@ public class traversal {
         // PrePost(root);
         // LevelWise(root);
         levelOrderLineWise(root);
-        zigZag(root);
+        levelOrderLineWise2(root);
+        levelOrderLineWise3(root);
+        // zigZag(root);
 
     }
 
