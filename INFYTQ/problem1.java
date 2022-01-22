@@ -1,4 +1,3 @@
-
 /*
 Bhojon is a restaurant company and has started a new wing in a city. They have every type of cook except the meatball artist. They had fired their last cook because the sale of meatballs in their restaurant is really great, and they can’t afford to make meatballs again and again every time their stock gets empty. They have arranged a hiring program, where you can apply with their meatball.
 They will add the meatball in their seekh (a queue) and everytime they cut the meatball they take it and cut it on the day’s quantity and then re-add the meatball in the seekh. You are the hiring manager there and you are going to say who is gonna be hired.

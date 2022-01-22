@@ -44,3 +44,34 @@ Explanation:
 At first he buys the 2nd book, which costs 3 rupees, so he saves 1 rupee. Then he buys the 1st book, that takes 2 rupees more. So he spends his stored 1 rupee and hence he needs 1 rupee more. Then he buys the last book.
 
 */
+import java.util.*;
+class problem2{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int earnSum=0, costSum=0;
+        int[] earn = new int[n];
+        int[] cost = new int[n];
+        for(int i=0;i<n;i++){
+            earn[i] = sc.nextInt();
+        }
+        for(int i=0;i<n;i++){
+            cost[i] = sc.nextInt();
+        }
+        int min = Integer.MAX_VALUE;
+        for(int i=0;i<n;i++){
+           earnSum=earnSum+earn[i];
+        }
+        for(int i=0;i<n;i++){
+            costSum=costSum+cost[i];
+         }
+
+        if(earnSum>costSum){
+            min = earnSum-costSum;
+    }else{
+        min = costSum-earnSum;
+    }
+
+    System.out.println(min);
+    }
+}

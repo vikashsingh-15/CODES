@@ -154,4 +154,26 @@ public class size_Sum_Max_Height {
     display(node.right);
   }
 
+
+  public static void display2(Node node) {
+    if (node == null) {
+      return;
+    }
+    if (node.left != null) {
+      System.out.print(node.left.data + " ");
+    } else {
+      System.out.print(" . ");
+
+    }
+    System.out.print(node.data + " ");
+    if (node.right != null) {
+      System.out.print(node.right.data + "");
+    } else {
+      System.out.print(" . ");
+    }
+    System.out.println("");
+    display2(node.left);
+    display2(node.right);
+  }
+
 }

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class implement {
+public class mirrorLinearlization {
   public static class Node {
     int data;
     Node left;
@@ -23,13 +23,32 @@ public class implement {
     }
   }
 
+  public static void mirror(Node node) {
+    if (node == null) {
+      return;
+    }
+
+    mirror(node.left);
+    mirror(node.right);
+
+    Node temp = node.left;
+    node.left = node.right;
+    node.right = temp;
+  }
+
+  
+
   public static void main(String[] args) {
     Integer[] arr = { 50, 25, 12, null, null, 37, 30, null, null, null, 75, 62, null, 70, null, null, 87, null, null };
     // Integer array not of int type because we are storing null value too;
     // if we dont want to store null then we can take int data type oof Array.
     Node root = construct(arr);
-    display(root);
+    // display(root);
+
+    // System.out.println("After Mirror");
+    // mirror(root);
     display2(root);
+    // linearlization(root);
   }
 
   public static Node construct(Integer[] arr) {
@@ -73,9 +92,7 @@ public class implement {
           st.push(rcp);
         }
         idx++;
-      }
-
-      else if (top.state == 3) {
+      } else if (top.state == 3) {
         st.pop();
       }
     }
@@ -87,15 +104,12 @@ public class implement {
     if (node == null) {
       return;
     }
-
     String str = " <- " + node.data + " -> ";
     String left = (node.left == null) ? "." : "" + node.left.data;
     String right = (node.right == null) ? "." : "" + node.right.data;
 
     str = left + str + right;
-
     System.out.println(str);
-
     display(node.left);
     display(node.right);
   }

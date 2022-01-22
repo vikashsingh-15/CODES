@@ -159,6 +159,27 @@ public class traversal {
         display(node.right);
     }
 
+    public static void display2(Node node) {
+        if (node == null) {
+          return;
+        }
+        if (node.left != null) {
+          System.out.print(node.left.data + " ");
+        } else {
+          System.out.print(" . ");
+    
+        }
+        System.out.print(node.data + " ");
+        if (node.right != null) {
+          System.out.print(node.right.data + "");
+        } else {
+          System.out.print(" . ");
+        }
+        System.out.println("");
+        display2(node.left);
+        display2(node.right);
+      }
+
     public static void main(String[] args) {
         Integer[] arr = { 50, 25, 12, null, null, 37, 30, null, null, null, 75, 62, null, 70, null, null, 87, null,
                 null };

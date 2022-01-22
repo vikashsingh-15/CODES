@@ -4,7 +4,7 @@ import java.util.*;
 // 24
 // 10 20 50 -1 60 -1 -1 30 70 -1 80 110 -1 120 -1 -1 90 -1 -1 40 100 -1 -1 -1 
 
-public class mirrorNormalization {
+public class mirrorLinearlization {
     public static class Node {
         int data; // for storing the data
         LinkedList<Node> children = new LinkedList<>(); // for storing the child nodes
@@ -20,7 +20,7 @@ public static void mirror(Node node){
     Collections.reverse(node.children);
 }
 
-public static void mirror2 (Node node){
+public static void mirror2 (Node node){//this dont work properly i guess
     Stack<Node> parentStack = new Stack<>();
     Stack<Node> childStack = new Stack<>();
     parentStack.push(node);
@@ -41,6 +41,35 @@ public static void mirror2 (Node node){
     }
 }
 
+public static void linearlization(Node node) {
+
+    if(node == null) {
+      return;
+    }
+    for(Node child : node.getChildren()) {
+      linearlization(child);
+    }
+    while(node.getChildren().size()>0){
+        Node last=node.children.remove(node.children.size()-1);
+        // Node last=node.children.removeLast();
+        Node secondlast = node.children.get(node.children.size()-1);
+        Node secondLastTail=getTail(secondlast);
+        secondlastTail.children.add(last);
+    }
+  }
+
+  public static getTail(Node node) {//part of linearlization
+    // if(node.children.size()==0) {
+    //   return node;
+    // }
+    // return getTail(node.children.get(node.children.size()-1));
+
+    // or
+    while(node.children.size()==1){
+        node=node.children.get(0);
+    }
+    return node;
+  }
 
 
 
