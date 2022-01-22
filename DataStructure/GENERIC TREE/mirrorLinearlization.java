@@ -46,19 +46,19 @@ public static void linearlization(Node node) {
     if(node == null) {
       return;
     }
-    for(Node child : node.getChildren()) {
+    for(Node child : node.children) {
       linearlization(child);
     }
-    while(node.getChildren().size()>0){
+    while(node.children.size()>0){
         Node last=node.children.remove(node.children.size()-1);
         // Node last=node.children.removeLast();
         Node secondlast = node.children.get(node.children.size()-1);
         Node secondLastTail=getTail(secondlast);
-        secondlastTail.children.add(last);
+        secondLastTail.children.add(last);
     }
   }
 
-  public static getTail(Node node) {//part of linearlization
+  public static Node getTail(Node node) {//part of linearlization
     // if(node.children.size()==0) {
     //   return node;
     // }
