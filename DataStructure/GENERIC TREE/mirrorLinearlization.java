@@ -43,13 +43,10 @@ public static void mirror2 (Node node){//this dont work properly i guess
 
 public static void linearlization(Node node) {
 
-    if(node == null) {
-      return;
-    }
     for(Node child : node.children) {
       linearlization(child);
     }
-    while(node.children.size()>0){
+    while(node.children.size()>1){
         Node last=node.children.remove(node.children.size()-1);
         // Node last=node.children.removeLast();
         Node secondlast = node.children.get(node.children.size()-1);
@@ -189,10 +186,11 @@ public static void linearlization(Node node) {
         Node root = construct(arr);
         // display2(root);
         // display3(root);
-        mirror(root);
+        // mirror(root);
+        linearlization(root);
         display(root);
-        System.out.println("Mirror 2");
-        mirror2(root);
+        // System.out.println("Mirror 2");
+        // mirror2(root);
     }
 
 }
