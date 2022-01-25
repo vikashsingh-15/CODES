@@ -66,8 +66,9 @@ class problem6 {
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] people = new Int[n];
-        int[] house = new Int[n];
+        int count=0;
+        int[] people = new int[n];
+        int[] house = new int[n];
         // ArrayList<Integer> peoplelist = new ArrayList<Integer>();
         // ArrayList<Integer> houselist = new ArrayList<Integer>();
 
@@ -79,9 +80,9 @@ class problem6 {
         }
 
         for (int i = 0; i < n; i++) {
-            int count = 0;
+            // int count = 0;
             for (int j = 0; j < n; j++) {
-                if (people[i] >= houes[j]) {
+                if (people[i] >= house[j]) {
                     house[j]=-1;
                     count++;
                     break;
@@ -89,7 +90,7 @@ class problem6 {
             }
         }
 
-        System.ou.println(n-count);
+        System.out.println (n-count);
     }
 
 }
