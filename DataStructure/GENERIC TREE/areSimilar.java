@@ -12,9 +12,9 @@ public class areSimilar {
     }
 
     public static boolean similar(Node node1, Node node2) {
-if((node==null && node2!=null) || (node1!=null && node2==null)){
-    return false;
-}
+// if((node==null && node2!=null) || (node1!=null && node2==null)){
+//     return false;
+// }
 
  if(node1.children.size()!=node2.children.size()){
      return false;
@@ -22,7 +22,7 @@ if((node==null && node2!=null) || (node1!=null && node2==null)){
  for(int i=0;i<node1.children.size();i++){
      Node c1=node1.children.get(i);
      Node c2=node2.children.get(i);
-     if(areSimilar(c1,c2)==false)
+     if(similar(c1,c2)==false)
      {
         return false;
         }
@@ -121,6 +121,8 @@ if((node==null && node2!=null) || (node1!=null && node2==null)){
 
         int[] arr = { 10, 20, 50, -1, 60, -1, -1, 30, 70, -1, 80, 110, -1, 120, -1,
 -1, 90, -1, -1, 40, 100, -1, -1, -1 };
+int[] arr2 = { 10, 20, 50, -1, 60, -1, -1, 30, 70, -1, 90, 110, -1, 120, -1,
+    -1, 90, -1, -1, 77, 100, -1, -1, -1 };
 
         // int[] arr = new int[n];
         // String[] values = br.readLine().split(" ");
@@ -129,9 +131,11 @@ if((node==null && node2!=null) || (node1!=null && node2==null)){
         // }
         
         Node root = construct(arr);
-        display(root);
+        Node root2 = construct(arr);
+        // display(root);
         // display2(root);
         // display3(root);
+        System.out.println(similar(root,root2));
 
     }
 
