@@ -7,6 +7,9 @@ public class FibonaciNumber {
         // int fib = FibSum(n);
         // System.out.println(fib);
 
+        // int fib = FibSum2(n);
+        // System.out.println(fib);
+
         // int printfibo[] = printfibo(n);
         // for (int i = 1; i < n; i++) {
         // System.out.println(printfibo1[i]);
@@ -32,6 +35,23 @@ public class FibonaciNumber {
         return fibn;
     }
 
+    public static int FibSum2(int n){
+
+        if (n == 0 || n == 1) {
+            return n;
+        }
+        int a=0;
+        int b=1;
+        int sum=a+b;
+        while(n>1){
+            sum=a+b;
+            a=b;
+            b=sum;
+            n--;
+        }
+        return sum;
+    }
+
     public static int[] printfibo1(int n) {
 
         if (n == 0 || n == 1) {
@@ -39,7 +59,6 @@ public class FibonaciNumber {
             fib[0] = n;
             return fib;
         }
-
         int fibo[] = new int[n + 1];
         fibo[0] = 0;
         fibo[1] = 1;
@@ -53,7 +72,6 @@ public class FibonaciNumber {
         if (n <= 1) {
             return n;
         } else {
-            System.out.println("Print fno = " + PrintFibo2(n - 1) + " " + PrintFibo2(n - 2));
             return PrintFibo2(n - 1) + PrintFibo2(n - 2);
         }
     }
