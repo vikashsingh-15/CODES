@@ -27,8 +27,7 @@ class Solution {
              int index=arr[i]%n;
              arr[index]+=n;
          }
-         
-         
+               
          boolean flag=false;
           for(int i=0;i<n;i++){
              if(arr[i]/n>1){
