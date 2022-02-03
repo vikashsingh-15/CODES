@@ -30,6 +30,7 @@ public static int[] mergeSort(int[] a, int low, int high) {
                 c[k] = b[j];
                 j++;
                 k++;
+                // count=count+(arr.length-i); //counting the number of inversions// decclare count as static as 0
             }
         }
         while (i < a.length) {
