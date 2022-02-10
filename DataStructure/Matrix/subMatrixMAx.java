@@ -5,7 +5,7 @@ public class subMatrixMAx {
             Scanner sc = new Scanner(System.in);
             System.out.println("Enter No");
             int row=sc.nextInt();
-            int matrix[][] = new int[row][row];
+            int matrix[][] = new int[row][];
     
             for(int i=0; i < row; i++){
                 String input = sc.next();
