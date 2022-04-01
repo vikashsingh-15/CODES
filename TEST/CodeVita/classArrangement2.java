@@ -1,4 +1,4 @@
-package TEST.FINISHED;
+package CodeVita;
 import java.util.Scanner;
 class classArrangement2 {
     static int Arrange(String str) {

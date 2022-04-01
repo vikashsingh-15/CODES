@@ -1,3 +1,4 @@
+package CodeVita;
 import java.util.*;
 
 class ChemicalNumberTheory {

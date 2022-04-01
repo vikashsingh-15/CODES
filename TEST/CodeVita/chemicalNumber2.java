@@ -1,3 +1,4 @@
+package CodeVita;
 import java.util.*;
 public class chemicalNumber2
 {
