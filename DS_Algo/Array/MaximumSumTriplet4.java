@@ -78,7 +78,7 @@ import java.util.*;
 
 public class MaximumSumTriplet4 {
     public static int solve(int[] Arr) throws Exception {
-        int ans = 0, justlower = 0;
+        int ans = 0;
         int n = Arr.length;
         int B[] = new int[n];
 
