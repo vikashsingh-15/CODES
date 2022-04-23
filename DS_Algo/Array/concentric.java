@@ -1,4 +1,4 @@
-package JAVA.CODES.CODES.InterviewBit.Array;
+// package JAVA.CODES.CODES.InterviewBit.Array;
 
 /*PRETTYPRINT
 Easy
