@@ -1,60 +1,52 @@
-package CodeVita;
-import java.util.Scanner;
-class classArrangement2 {
-    static int Arrange(String str) {
+import java.util.*;
+
+public class classArrangement2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String inputStr = sc.next();
+        inputStr = inputStr.toUpperCase();
+        System.out.println(Arrange(inputStr));
+    }
+
+    
+    public static int Arrange(String str) {
         int noOfB = 0, noOfG = 0;
-        int l=str.length();
+        int l = str.length();
+        int ans = 0;
         for (int i = 0; i < l; i++) {
             if (str.charAt(i) == 'B')
                 noOfB++;
             else
                 noOfG++;
         }
-        if (Math.abs(noOfG - noOfB) > 1){
+        if (Math.abs(noOfG - noOfB) > 1) {
             return -1;
         }
-        int count1 = 0, count2 = 0;
-       
-        for (int i = 0; i < l; i++) {
-            if (i % 2 == 0) {
-                if (str.charAt(i) != 'B')
-                    count1++;
-            } else {
-                if (str.charAt(i) != 'G')
-                    count1++;
+        if (str.length() % 2 == 0) {
+            char c = noofB > noofG ? 'B' : 'G';
+            for (int i = 0; i < str.length(); i = i + 2) {
+                if (str.charAt(i) != c) {
+                    ans++;
+                }
             }
-        }
-
-        for (int i = 0; i < l; i++) {
-            if (i % 2 == 0) {
-                if (str.charAt(i) != 'G')
-                    count2++;
-            } else {
-                if (str.charAt(i) != 'B')
-                    count2++;
+        } else {
+            int bAtEven = 0, gAtEven = 0;
+            for (int i = 0; i < str.length(); i = i + 2) {
+                if (str.charAt(i) == 'B') {
+                    bAtEven++;
+                } else {
+                    gAtEven++;
+                }
             }
-        }
-
-        if (count1 % 2 == 0 && count2 % 2 == 0){
-             if(count1 / 2< count2 / 2){
-                          return count1 / 2;
-                    }       
-             else{
-                    return count2 / 2;
-            }
-        }
-
-        else {
-            if (count1 % 2 == 0)
-                return count1 / 2;
+            if (bAtEven > gAtEven)
+                ans = str.length()/2 - bAtEven;
+            else if (gAtEven > bAtEven)
+                ans = str.length()/2 - gAtEven;
             else
-                return count2 / 2;
-        }
-    }
+                ans += bAtEven;
 
-    public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(System.in);
-        String inputStr = sc.next();
-        System.out.println(Arrange(inputStr));
+        }
+        return ans;
+
     }
 }
