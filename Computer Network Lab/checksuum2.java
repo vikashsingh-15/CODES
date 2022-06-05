@@ -35,7 +35,7 @@ public class checksuum2 {
       sum = binaryAdd(num1, num2);
     }
 
-    for (int i = 0; i < sum.length(); i++) {
+    for (int i = 0; i < sum.length(); i++) {//1 s complement
       if (sum.charAt(i) == '1') {
         ans = ans + "0";
       } else {
