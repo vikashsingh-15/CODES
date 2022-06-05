@@ -75,7 +75,7 @@ public class checksuum2 {
       String num2 = sum;
       sum = binaryAdd(num1, num2);
     }
-
+   
     for (int i = 0; i < sum.length(); i++) {
       int x = sum.charAt(i) - '0';
       ans = ans * x;
