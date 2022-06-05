@@ -90,6 +90,7 @@ public class crc {
                 }
             }
         }  
+        
     int sum=0;
         for (int i = 0; i < data.length; i++) {
          sum=sum+data[i];
