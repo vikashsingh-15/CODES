@@ -1,3 +1,4 @@
+package CollegeSocket;
 import java.io.*;
 import java.net.*;
 

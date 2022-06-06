@@ -1,3 +1,4 @@
+package CollegeSocket;
 import java.net.Socket;
 import java.io.IOException;
 import java.net.ServerSocket;
