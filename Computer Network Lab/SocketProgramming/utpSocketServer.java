@@ -1,9 +1,7 @@
 import java.io.*;
 import java.net.*;
 import java.util.*;
-
 public class utpSocketServer {
-
   public static void main(String[] args) throws Exception {
     DatagramSocket ds = new DatagramSocket(1889);
     byte data[] = new byte[1024];

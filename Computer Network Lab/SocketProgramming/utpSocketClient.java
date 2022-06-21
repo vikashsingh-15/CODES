@@ -1,9 +1,7 @@
 import java.io.*;
 import java.net.*;
 import java.util.*;
-
 public class utpSocketClient {
-
   public static void main(String[] args) throws Exception {
     DatagramSocket ds = new DatagramSocket();
     Scanner sc = new Scanner(System.in);
