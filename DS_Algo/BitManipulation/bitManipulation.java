@@ -10,8 +10,8 @@ public class bitManipulation {
         // leftMostBit(x);
         // countSetBits(x);
         // reverseBits(x);
-        flipBits(x);
-        // tailingZeros(x);
+        // flipBits(x);
+        tailingZeros(x);
     }
 
     private static void rightMostBit(int x) {
@@ -195,6 +195,7 @@ public class bitManipulation {
     }
 
     public static void tailingZeros(int x) {
+        System.out.println(Integer.toBinaryString(x));
         int x1 = x;
         int x2 = x1;
         int x3 = x2;
@@ -211,7 +212,14 @@ public class bitManipulation {
 
         // way 2
         int count2 = 0;
+        while ((x2 & 1) == 0){
+            x2 = x2 >> 1;
+            count2++;
+        }
+        System.out.println("2 Tailing Zeros " + count2);
 
+        // way 3
+        
     }
 
 }
