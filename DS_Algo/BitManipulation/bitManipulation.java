@@ -219,6 +219,8 @@ public class bitManipulation {
         System.out.println("2 Tailing Zeros " + count2);
 
         // way 3
+        int rightMostBit2 = (int) ((Math.log(x & -x)) / Math.log(2)) + 1;
+        System.out.println("3 Tailing Zeros " + (rightMostBit2-1));
         
     }
 
